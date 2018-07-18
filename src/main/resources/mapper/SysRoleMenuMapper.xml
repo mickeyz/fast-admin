@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="my.fast.admin.modules.system.mapper.SysRoleMenuMapper">
+
+    <select id="getParmByUser" resultType="string" parameterType="string">
+        select distinct sm.menu_parm from sys_menu sm left join sys_role_menu rm on sm.menu_id = rm.menu_id
+                left join sys_role_user ru on rm.role_id = ru.role_id
+                where sm.menu_type = '2' and ru.user_id = #{loginid}
+    </select>
+
+</mapper>

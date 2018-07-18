@@ -1,0 +1,13 @@
+.clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 56%;
+    margin-top: -8px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #c2c2c2;
+}
+.clear-btn:hover {
+    color:rgb(41, 145, 217);
+    cursor: pointer;
+}

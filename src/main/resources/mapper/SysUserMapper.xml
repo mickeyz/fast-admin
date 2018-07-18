@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="my.fast.admin.modules.system.mapper.SysUserMapper">
+
+    <select id="getListByPage" resultType="my.fast.admin.modules.system.entity.SysUser" parameterType="map">
+      select t.*,getOrgName(t.orgid) orgname from sys_user t
+      <where>
+          <if test="username != null and username != ''">and username like concat(concat('%',#{username}),'%')</if>
+          <if test="orgid != null and orgid != ''">and orgid = #{orgid}</if>
+      </where>
+    </select>
+</mapper>

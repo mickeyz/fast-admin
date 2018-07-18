@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="my.fast.admin.modules.system.mapper.SysOrgMapper">
+
+    <select id="getOrgListByPage" resultType="my.fast.admin.modules.system.entity.SysOrg" parameterType="map">
+        select t.*,(select org_name from sys_org s where s.org_code = t.org_pid) orgPname from sys_org t
+        <where>
+            <if test="org_name != null and org_name != ''"> and org_name = #{org_name}</if>
+            <if test="org_pid != null and org_pid != ''"> and org_pid = #{org_pid}</if>
+        </where>
+        order by org_code
+    </select>
+
+</mapper>

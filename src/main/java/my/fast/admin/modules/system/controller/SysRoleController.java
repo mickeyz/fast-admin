@@ -107,7 +107,7 @@ public class SysRoleController {
      * @return
      */
     @RequestMapping("/user")
-    @Cacheable(value = "sys_user:sys/role/user")
+//    @Cacheable(value = "sys_user:sys/role/user")
     public R user() {
         EntityWrapper<SysUser> ew = new EntityWrapper<>();
         ew.eq("statue", "1")

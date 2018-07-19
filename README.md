@@ -16,3 +16,5 @@
         - zTree             树插件
         - Font-awesome      字体图标
 效果图
+
+![效果图](https://github.com/mickeyz/fast-admin/blob/master/src/main/resources/static/images/result/001.png)

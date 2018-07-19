@@ -15,6 +15,17 @@
         - jQuery            JS框架
         - zTree             树插件
         - Font-awesome      字体图标
+使用方法
+
+    1、导入sql,目录:resources/sql
+    2、安装redis并启动服务
+    3、maven打包运行或者IDE运行
+
 效果图
 
-![效果图](https://github.com/mickeyz/fast-admin/blob/master/src/main/resources/static/images/result/001.png)
+![登录页](https://github.com/mickeyz/fast-admin/blob/master/src/main/resources/static/images/result/001.png)
+![用户列表](https://github.com/mickeyz/fast-admin/blob/master/src/main/resources/static/images/result/002.png)
+![新增页](https://github.com/mickeyz/fast-admin/blob/master/src/main/resources/static/images/result/003.png)
+![菜单列表](https://github.com/mickeyz/fast-admin/blob/master/src/main/resources/static/images/result/004.png)
+![菜单赋权](https://github.com/mickeyz/fast-admin/blob/master/src/main/resources/static/images/result/005.png)
+![树形菜单](https://github.com/mickeyz/fast-admin/blob/master/src/main/resources/static/images/result/006.png)

@@ -86,19 +86,19 @@
         // 提交
         window.roleGrent = function (data, type){
             var roleUserSel = formSelects.value('roleUser', 'val');
-            var node = ztree.getCheckedNodes(true);
-            var n_id = "";
-            for (var i = 0; i < node.length; i++) {
-                n_id = i > 0 ? n_id + "," + node[i].id : n_id + node[i].id;
-            }
             var roleMenuTemp = $('#roleMenuTemp').val();
             var flag = false;
             var params;
+            var n_id = "";
             if (JSON.stringify(data.roleUser.split(",").sort()) != JSON.stringify(roleUserSel.sort()) && type === 'user') {
                 flag = true;
                 params = "roleId=" + data.roleId + "&roleUser=" + roleUserSel;
             }
-            if (JSON.stringify(n_id.split(",").sort()) != JSON.stringify(roleMenuTemp.split(",").sort()) && type === 'menu') {
+            if (n_id != "" && JSON.stringify(n_id.split(",").sort()) != JSON.stringify(roleMenuTemp.split(",").sort()) && type === 'menu') {
+                var node = ztree.getCheckedNodes(true);
+                for (var i = 0; i < node.length; i++) {
+                    n_id = i > 0 ? n_id + "," + node[i].id : n_id + node[i].id;
+                }
                 flag = true;
                 params = "roleId=" + data.roleId + "&roleMenu=" + n_id;
             }

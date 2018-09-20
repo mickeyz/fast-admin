@@ -37,10 +37,10 @@ import java.util.Map;
 public class SysDicController {
 
     @Autowired
-    SysDicService sysDicService;
+    private SysDicService sysDicService;
 
     @Autowired
-    RedisTemplate redisTemplate;
+    private RedisTemplate redisTemplate;
 
     @RequestMapping("/getDicByDefine")
     @Cacheable(value = "sys_dic", key = "#dicdefine")

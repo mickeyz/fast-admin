@@ -21,7 +21,7 @@ import java.util.List;
 @Service
 public class SysRoleMenuServiceImpl extends ServiceImpl<SysRoleMenuMapper, SysRoleMenu> implements SysRoleMenuService {
     @Autowired
-    SysRoleMenuMapper sysRoleMenuMapper;
+    private SysRoleMenuMapper sysRoleMenuMapper;
 
     @Override
     @Cacheable(value = "sys_role:sys/shiro/parm", keyGenerator = "keyGenerator")

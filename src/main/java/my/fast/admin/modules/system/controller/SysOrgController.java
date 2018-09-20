@@ -37,7 +37,7 @@ import java.util.Map;
 public class SysOrgController {
 
     @Autowired
-    SysOrgService sysOrgService;
+    private SysOrgService sysOrgService;
 
     @RequestMapping("/tree")
     @Cacheable(value = "sys_org:sys/org/tree")

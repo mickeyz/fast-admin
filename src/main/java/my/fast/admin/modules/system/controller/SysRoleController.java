@@ -35,11 +35,11 @@ import java.util.*;
 public class SysRoleController {
 
     @Autowired
-    SysRoleService sysRoleService;
+    private SysRoleService sysRoleService;
     @Autowired
-    SysUserService sysUserService;
+    private SysUserService sysUserService;
     @Autowired
-    SysMenuService sysMenuService;
+    private SysMenuService sysMenuService;
 
     @RequestMapping("/list")
     public Object list() {

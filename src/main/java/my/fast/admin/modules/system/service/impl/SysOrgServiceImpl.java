@@ -22,7 +22,7 @@ import java.util.Map;
 public class SysOrgServiceImpl extends ServiceImpl<SysOrgMapper, SysOrg> implements SysOrgService {
 
     @Autowired
-    SysOrgMapper sysOrgMapper;
+    private SysOrgMapper sysOrgMapper;
 
     @Override
     public Page<SysOrg> getOrgListByPage(Page page, Map map) {

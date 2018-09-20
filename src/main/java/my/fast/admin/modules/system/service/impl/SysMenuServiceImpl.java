@@ -24,7 +24,7 @@ import java.util.Map;
 public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> implements SysMenuService {
 
     @Autowired
-    SysMenuMapper sysMenuMapper;
+    private SysMenuMapper sysMenuMapper;
 
     @Override
     @Cacheable(value = "sys_menu:sys/menu/user", keyGenerator = "keyGenerator")

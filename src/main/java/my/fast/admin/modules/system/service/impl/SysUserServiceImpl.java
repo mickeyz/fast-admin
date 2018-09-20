@@ -18,7 +18,7 @@ import java.util.Map;
 @Service
 public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> implements SysUserService {
     @Autowired
-    SysUserMapper sysUserMapper;
+    private SysUserMapper sysUserMapper;
 
     @Override
     public Page<SysUser> getListByPage(Page page, Map map) {

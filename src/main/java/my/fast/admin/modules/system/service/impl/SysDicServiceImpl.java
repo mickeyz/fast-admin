@@ -22,7 +22,7 @@ import java.util.Map;
 public class SysDicServiceImpl extends ServiceImpl<SysDicMapper, SysDic> implements SysDicService {
 
     @Autowired
-    SysDicMapper sysDicMapper;
+    private SysDicMapper sysDicMapper;
 
     @Override
     public List<Map> getDic(String dicdefine) {

@@ -36,7 +36,7 @@ public class SysUserController {
     private static final String PWD = "123456";
 
     @Autowired
-    SysUserService sysUserService;
+    private SysUserService sysUserService;
 
     @RequestMapping("/info")
     public Object userinfo(){

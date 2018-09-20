@@ -35,7 +35,7 @@ import java.util.Map;
 public class SysMenuController {
 
     @Autowired
-    SysMenuService sysMenuService;
+    private SysMenuService sysMenuService;
 
     @RequestMapping("/user")
     public Object user() {
